@@ -11,15 +11,12 @@ body{
    justify-content: center;
    align-items: center;
    min-height: 100vh;
-   background: #222;
+   background: #0c192e;
+   
 }
 
 body.on{
     background: radial-gradient(#555 #111);
-}
-
-.light{
-    position: relative;
 }
 
 .bulb
@@ -27,7 +24,7 @@ body.on{
     position: relative;
     width: 80px;
     height: 80px;
-    background: #444;
+    background: #182945;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -58,7 +55,7 @@ body.on .bulb::before{
     left: 22.5px;
     width: 35px;
     height: 80px;
-    background: #444;
+    background: #182945;
     border-top: 30px solid #000;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -88,7 +85,7 @@ body.on .bulb::after{
     filter: blur(40px);
     -webkit-filter: blur(40px);
 }
-
+/* 
 .bulb span:nth-child(1){
     position: absolute;
     top: -16px;
@@ -129,23 +126,22 @@ body.on .bulb span:nth-child(1){
 
 body.on .bulb span:nth-child(2){
     box-shadow: -20px 20px 0 10px #fff;
-}
+} */
 
 .wire{
     position: absolute;
     left: calc(50% - 2px);
-    top: -100%;
     width: 4px;
-    height: 40vh;
+    height: 50vh;
+    bottom: 60%;
     background: #000;
     z-index: 1;
 }
 
 .switch{
     margin-top: 50px;
-    position: static;
+    position: absolute;
     bottom: 50px;
-    right: 50px;
     width: 80px;
     height: 80px;
     background: linear-gradient(#eee, #ccc, #eee);
