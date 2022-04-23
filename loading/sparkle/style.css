@@ -51,23 +51,30 @@ section{
     background: transparent;
     border: 10px solid turquoise;
     box-sizing: border-box;
-    box-shadow: 0 0 20px turquoise,    
-    -60px -60px 0 turquoise,    
-    -60px -60px 20px turquoise,    
-    60px 60px 0 turquoise,    
-    60px 60px 20px turquoise,    
-    60px -60px 0 turquoise,    
-    60px -60px 20px turquoise,    
-    -60px 60px 0 turquoise,    
-    -60px 60px 20px turquoise;
+    box-shadow: 0 0 20px turquoise,        -60px -60px 0 turquoise,        -60px -60px 20px turquoise,        60px 60px 0 turquoise,        60px 60px 20px turquoise,        60px -60px 0 turquoise,        60px -60px 20px turquoise,        -60px 60px 0 turquoise,        -60px 60px 20px turquoise;
     animation: animate 5s linear infinite;
     -webkit-animation: animate 5s linear infinite;
     animation-delay: calc(-0.25s * var(--i));
     transform-origin: 40px;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
 }
 
 .loader:hover span::before{
+    box-shadow: 0 0 20px turquoise,        
+    -400px -400px 0 turquoise,        
+    -400px -400px 20px turquoise,        
+    400px 400px 0 turquoise,        
+    400px 400px 20px turquoise,        
+    400px -400px 0 turquoise,        
+    400px -400px 20px turquoise,        
+    -400px 400px 0 turquoise,        
+    -400px 400px 20px turquoise;
     transform-origin: 500px;
+    
 }
 
 @keyframes animate {
