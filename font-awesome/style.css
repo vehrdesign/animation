@@ -59,6 +59,12 @@ section .row div{
     animation-delay: -80s;
 }
 
+section .row div:nth-child(2){
+    animation: animate2 80s linear infinite;
+    -webkit-animation: animate32 80s linear infinite;
+    animation-delay: -40s;
+}
+
 @keyframes animate{
     0%
     {
@@ -77,3 +83,22 @@ section .row div{
         -o-transform: translateX(-100%);
 }
 }
+
+@keyframes animate2{
+    0%
+    {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+}
+    100%
+    {
+        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+}
+}  
