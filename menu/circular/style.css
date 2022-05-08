@@ -61,5 +61,196 @@ body
 
 .menu li
 {
-    
+    position: absolute;    
+    left: 10px;
+    list-style: none;
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+    -webkit-transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+    -moz-transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+    -ms-transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+    -o-transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+    transform-origin: 140px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    z-index: 10;
+}
+
+.menu.active li
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    font-size: 1.75em;
+    color: #222327;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    -webkit-transform: rotate(calc(360deg / -8 * var(--i)));
+    -moz-transform: rotate(calc(360deg / -8 * var(--i)));
+    -ms-transform: rotate(calc(360deg / -8 * var(--i)));
+    -o-transform: rotate(calc(360deg / -8 * var(--i)));
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+li.active
+{
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -webkit-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -moz-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -ms-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -o-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+}
+
+.menu.active li.active
+{
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -webkit-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -moz-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -ms-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+    -o-transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+}
+
+.indicatior
+{
+    position: absolute;
+    left: calc(50% + 2.5px);
+    transform-origin: right;
+    width: 100px;
+    height: 1px;
+    background: red;
+    pointer-events: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.indicatior::before
+{
+    content: '';
+    position: absolute;
+    top: -27.5px;
+    left: 72px;
+    width: 55px;
+    height: 55px;
+    background: #222237;
+    box-shadow: 0 0 0 6px #222237;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.menu.active .indicatior::before{
+    opacity: 1;
+    top: -27.5px;
+    left: -27.5px;
+    background: #29fd53;
+    box-shadow: 0 0 0 6px #222237;   
+}
+/* 
+.menu li:nth-child(var(--i)+1).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(calc(var(--i) * 45deg));
+    -webkit-transform: translateX(-103px) rotate(calc(var(--i) * 45deg));
+    -moz-transform: translateX(-103px) rotate(calc(var(--i) * 45deg));
+    -ms-transform: translateX(-103px) rotate(calc(var(--i) * 45deg));
+    -o-transform: translateX(-103px) rotate(calc(var(--i) * 45deg));
+} */
+/* 
+.menu li:nth-child(i+1).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(calc(i * 45deg));
+    -webkit-transform: translateX(-103px) rotate(calc(i * 45deg));
+    -moz-transform: translateX(-103px) rotate(calc(i * 45deg));
+    -ms-transform: translateX(-103px) rotate(calc(i * 45deg));
+    -o-transform: translateX(-103px) rotate(calc(i * 45deg));
+} */
+
+.menu li:nth-child(2).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(0deg);
+    -webkit-transform: translateX(-103px) rotate(0deg);
+    -moz-transform: translateX(-103px) rotate(0deg);
+    -ms-transform: translateX(-103px) rotate(0deg);
+    -o-transform: translateX(-103px) rotate(0deg);
+}
+
+.menu li:nth-child(3).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(45deg);
+    -webkit-transform: translateX(-103px) rotate(45deg);
+    -moz-transform: translateX(-103px) rotate(45deg);
+    -ms-transform: translateX(-103px) rotate(45deg);
+    -o-transform: translateX(-103px) rotate(45deg);
+}
+.menu li:nth-child(4).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(90deg);
+    -webkit-transform: translateX(-103px) rotate(90deg);
+    -moz-transform: translateX(-103px) rotate(90deg);
+    -ms-transform: translateX(-103px) rotate(90deg);
+    -o-transform: translateX(-103px) rotate(90deg);
+}
+.menu li:nth-child(5).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(135deg);
+    -webkit-transform: translateX(-103px) rotate(135deg);
+    -moz-transform: translateX(-103px) rotate(135deg);
+    -ms-transform: translateX(-103px) rotate(135deg);
+    -o-transform: translateX(-103px) rotate(135deg);
+}
+.menu li:nth-child(6).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(180deg);
+    -webkit-transform: translateX(-103px) rotate(180deg);
+    -moz-transform: translateX(-103px) rotate(180deg);
+    -ms-transform: translateX(-103px) rotate(180deg);
+    -o-transform: translateX(-103px) rotate(180deg);
+}
+.menu li:nth-child(7).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(225deg);
+    -webkit-transform: translateX(-103px) rotate(225deg);
+    -moz-transform: translateX(-103px) rotate(225deg);
+    -ms-transform: translateX(-103px) rotate(225deg);
+    -o-transform: translateX(-103px) rotate(225deg);
+}
+.menu li:nth-child(8).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(270deg);
+    -webkit-transform: translateX(-103px) rotate(270deg);
+    -moz-transform: translateX(-103px) rotate(270deg);
+    -ms-transform: translateX(-103px) rotate(270deg);
+    -o-transform: translateX(-103px) rotate(270deg);
+}
+.menu li:nth-child(9).active ~ .indicatior
+{
+    transform: translateX(-103px) rotate(315deg);
+    -webkit-transform: translateX(-103px) rotate(315deg);
+    -moz-transform: translateX(-103px) rotate(315deg);
+    -ms-transform: translateX(-103px) rotate(315deg);
+    -o-transform: translateX(-103px) rotate(315deg);
 }
