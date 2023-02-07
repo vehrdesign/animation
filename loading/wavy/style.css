@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 50vw;
+    background: #000;
+}
+
+.loader{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    /* transform: rotate(175deg);
+    -webkit-transform: rotate(175deg);
+    -moz-transform: rotate(175deg);
+    -ms-transform: rotate(175deg);
+    -o-transform: rotate(175deg); */
+}
+
+.loader span{
+    position: absolute;
+    top: calc(12px * var(--i));
+    bottom: calc(12px * var(--i));
+    left: calc(12px * var(--i));
+    right: calc(12px * var(--i));
+    border: 10px solid #0b0b0b;
+    border-top: 10px solid orange;
+    border-left: 10px solid yellowgreen;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: animate 1s alternate ease-in-out infinite;
+    -webkit-animation: animate 1s alternate ease-in-out infinite;
+    filter: hue-rotate(calc(60deg * var(--i)));
+    -webkit-filter: hue-rotate(calc(60deg * var(--i)));
+    animation-delay:calc(-0.1s * var(--i));
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+}
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <div id="ball">
+        <h1>Click on the basketball to change color</h1>
+        <!-- <img src="../images/farbspot1.jpg" alt="farbspot1.jpg">
+        <img src="../images/farbspot2.jpg" alt="farbspot1.jpg">
+        <img src="../images/farbspot3.jpg" alt="farbspot1.jpg"> -->
+        <!-- <img src="../images/farbspot4.jpg" alt="farbspot1.jpg"></div> -->
+        <div id="bg"></div>
+        <!-- <script src="path/to/vanilla.js"></script> -->
+        <script type="text/javascript">
+        const bg = document.getElementById('bg');
+        function randomColor(){
+            return Math.floor(Math.random() * 255);
+        }
+        bg.addEventListener('click', () => {
+            bg.style.backgroundColor = 'rgba('+randomColor()+','+randomColor()+','+randomColor()+'\)'
+        })
+        </script>
+        </div>
+</body>
+</html>
